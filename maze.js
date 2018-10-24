@@ -56,3 +56,24 @@ endOfMaze.addEventListener("mouseover", function end()
 
 
 
+let resetGame = document.getElementById("start");
+resetGame.addEventListener("click", function reset()
+
+	{
+		var i = document.getElementsByClassName("boundary").length - 1;
+		while (i >= 0)
+		{
+			document.querySelectorAll(".boundary")[i].classList.remove("youlose");
+	 		i--;
+	    }
+
+	    	// When the user clicks the start icon, this code, it removes the status either you win or you lose
+	   if (document.getElementsByTagName("div").innerHTML === `<h2 id = "status"> You Win </h2>` || `<h2 id = "status"> You Lose </h2>`)
+	   			{
+	   				var removeSatus = document.getElementById("status");
+	   				removeSatus.parentNode.removeChild(removeSatus);
+	   			}
+
+	}
+
+)

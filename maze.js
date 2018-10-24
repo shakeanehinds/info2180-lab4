@@ -77,3 +77,27 @@ resetGame.addEventListener("click", function reset()
 	}
 
 )
+let loseGame = document.getElementById("maze");
+loseGame.addEventListener("mouseleave", function endGame()
+					{
+						for (var n = 0; n < document.getElementsByClassName("boundary").length - 1; n++)
+						{
+		
+						document.querySelectorAll("div.boundary")[n].classList.add("youlose");
+						}
+								
+/* These line of code
+is used to print the "You
+Lose statement to the
+document" */				let newElement = document.createElement("h2");
+							newElement.textContent = "You Lose!";
+						    document.body.append(newElement);
+						    var status = document.createAttribute("id");
+							status.value = "status";
+							newElement.setAttributeNode(status);
+
+						}
+
+	)
+
+

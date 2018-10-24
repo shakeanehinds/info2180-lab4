@@ -36,3 +36,23 @@ for ( var count = 0; count < document.getElementsByClassName("boundary").length 
 
 
 
+let endOfMaze = document.getElementById("end");
+endOfMaze.addEventListener("mouseover", function end()
+		{
+			if (document.getElementsByClassName("youlose").length === 0)
+			{
+
+				let newElement = document.createElement("h2");
+				newElement.textContent = "You Win!";
+				document.body.append(newElement);
+				var status = document.createAttribute("id");
+				status.value = "status";
+				newElement.setAttributeNode(status);	
+
+			}
+		}	
+
+	)
+
+
+
